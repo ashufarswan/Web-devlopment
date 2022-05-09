@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>Form</title>
+        
+    </head>
+    
+    <body>
+        <form>
+            <table cellspacing="2"  align="centre" cellpadding="2" border="1px solid black">
+                
+                
+                <tr > <td colspan="2" style="text-align: center" > <b><u>Project Management</u></b></td> </tr>
+            
+                <tr> <td>Project Name</td> <td><input type="text" size="20" name="pname" id="pname"></td></tr>
+                <tr> <td>Assigne To</td>
+                     <td> <input list="fnames" name="fname">
+                         <datalist id="fnames">
+                            <option value="abc">
+                            <option value="xyz">
+                         </datalist>
+                     </td>
+                </tr>
+                
+                <tr><td>Start Date</td> <td> <input type="date" name="sd" id="sd"></td></tr>
+                <tr><td>End Date</td> <td> <input type="date" name="ed" id="ed"></td></tr>    
+                    
+                <tr> <td>Priority</td>
+                
+                      <td>
+                          <input type="radio" id="h" name="h"> <label for="h">High</label>
+                          <input type="radio" id="a" name="a"> <label for="a">Average</label>
+                          <input type="radio" id="l" name="l"> <label for="l">Low</label>
+                     </td>
+                </tr>
+                
+                <tr rospan="3">
+                    <td>Description </td>
+                    <td><textarea name="desc"></textarea></td>
+                
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr>
+                    <td><input type="submit" value="Submit"></td>
+                    <td><input type="reset" value="Reset"></td>
+                </tr>
+            </table>
+        </form>    
+    </body>
+    
+</html>

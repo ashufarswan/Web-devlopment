@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <script>
+        
+            function findpair(a){
+                var text = " ";
+                for(var i=0;i<a.length-1;i++){
+                    for(var j= i+1;j<a.length;j++){
+                        if(a[i]+a[j] == 10){
+                            text += `${a[i]} + ${a[j]} = 10 <br>`;
+                        }
+                    }
+                }
+                document.write(text);
+            }
+            
+            var a = [4, 6, 5, -10, 8, 5, 20];
+            findpair(a);
+        </script>
+    </body>
+</html>

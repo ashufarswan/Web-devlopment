@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function capitalize_word() {
+                str = document.getElementById("string").value;
+                str = str.split(" ");
+                for (var i = 0, x = str.length; i < x; i++) {
+                    str[i] = str[i][0].toUpperCase() + str[i].substr(1);
+                }
+                str = str.join(" ");
+                document.getElementById("ans").value = str;
+            }
+        </script>
+        
+        
+        Enter the word here: <input id="string">
+        Ans                  <input id="ans">
+        <input type="button" onclick="capitalize_word()" value="Capitalize" >
+    </body>
+</html>

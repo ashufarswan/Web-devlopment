@@ -1,0 +1,33 @@
+<html>
+    <body>
+        <script>    
+        
+            function count(){
+                var str = document.getElementById("str").value.toString();
+                var last = str.charAt(0);
+                var i = 1, c = 0;
+                while (i < str.length){
+                     if (str.charAt(i) == '1' && last == '0')
+                        {
+                            while (str.charAt(i) == '1')
+                                i++;
+                            if (str.charAt(i) == '0')
+                                c++;
+                        }
+                     last = str.charAt(i);
+                     i++;
+                }
+                    
+                    
+                document.getElementById("c").innerHTML = "count:" + c;
+            }
+        
+        </script>
+        
+        <label> String : </label>  <input type=text id="str" name="str">
+        <br>
+        <br>
+        <button onclick="count()"> count </button>
+        <h4 id = "c"></h4>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html >
+<body>
+    <script>
+        function occur() {
+            var str = document.getElementById("first").value;
+            var s='';
+            for(var i=0;i<str.length;i++){
+                var count =0;
+                for(var j=0;j<str.length;j++){
+                    if(str[i]==str[j] && i>j)
+                        break;
+                    if(str[i]==str[j])
+                        count++;
+                }
+                if(count>0){
+                    s+=str[i]+" - "+count+" times.   ";
+                }
+            }
+            document.getElementById("ans").innerHTML = s;
+        }
+    </script>
+    
+    Enter the word here: <input id="first">
+    <p id="ans"><p>
+    <input type="button" onclick="occur()" value="Occur" />
+</body>
+
+</html>

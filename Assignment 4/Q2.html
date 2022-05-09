@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function swap_case() {
+                str = document.getElementById("string").value;
+                res = '';
+                for (var i = 0; i < str.length; ++i) {
+                    c = str[i];
+                    if (c == c.toUpperCase()) 
+                        res += c.toLowerCase();
+                    else if (c == c.toLowerCase()) 
+                        res += c.toUpperCase();
+                    else 
+                        res += c;
+                    }
+                document.getElementById("ans").value = res;
+            }
+
+        </script>
+        
+        Enter the word here: <input id="string">
+        Ans                  <input id="ans">
+        <input type="button" onclick="swap_case()" value="SwapCase" >
+    </body>
+</html>

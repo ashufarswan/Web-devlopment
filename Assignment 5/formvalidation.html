@@ -1,0 +1,64 @@
+<html>
+    <body>
+        <form name="f1">
+            <table cellspacing="2"  align="centre" cellpadding="2">
+                <tr> <td> Name:</td>  <td> <input type="text" id="name" name="fname"></td> </tr>
+                <tr> <td> Email&nbsp;Id:</td>>       <td> <input type="text" name="eid" id="eid"></td> </tr>                
+                <tr> <td> Phone&nbsp;no:</td> <td> <input type="text" name="pno" id="pno"> </td></tr>
+                <tr> <td> Adhar&nbsp;no:</td> <td> <input type="text" name="ano" id="ano"> </td></tr>
+                <tr> <td> Pincode:</td> <td> <input type="text" name="p" id="p"> </td></tr>
+                
+                
+                <tr colspan="2"> <td><input type="submit" name="Submit" id="Submit" onclick="validate()"></td>> </tr>
+            </table>
+        </form>
+        
+        
+        <script>
+        
+            function validate(){
+                var po = /^\+"91"\s\d{4}\s\d{3}\s\d{3}$/;
+                var n = /[a-zA-Z ]+/;
+                var e = /[a-zA-Z0-9]+"@gmail.com"$/;
+                var a = /^[0-9]\d{3}\s\d{4}\s\d{4}$/;
+                var pc = /^[0-9]\d{5}$/;
+                
+                
+                if(document.f1.name.value.match(n)){
+                    if(document.f1.eid.value.match(e)){
+                        if(document.f1.pno.value.match(po)){
+                            if(document.f1.ano.value.match(a)){
+                                if(document.f1.p.value.match.(pc)){
+                                    return true;
+                                }
+                                else{
+                                    alert("Pcode");
+                                    return false;
+                                }
+                            }
+                            else{
+                                alert("Adhar");
+                                return false;
+                            }
+                        }
+                        else{
+                            alert("Pno");
+                            return false;
+                        }
+                    }
+                    else{
+                        alert("Email");
+                        return false;
+                    }
+                }
+                else{
+                    alert("name");
+                    return false;
+                }
+            }
+            
+        </script>
+        
+    </body>
+</html>
+    

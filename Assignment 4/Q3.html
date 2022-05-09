@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html >
+<body>
+    
+    <script>
+        function leftMostVowel(){
+            var s = document.getElementById("first").value;
+            for(var i = 0 ; i < s.length ; i++ ){
+                var c = s.charAt(i).toLowerCase();
+                if(c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u'){
+                    document.getElementById("ans").value = c;
+                    break;
+                }
+            }
+        }
+
+        function rev(){
+            var a = document.getElementById("sec").value;
+            var b = a.split("");
+            b.reverse();
+            a = b.join("");
+            document.getElementById("ans1").value = a;
+        }
+    </script>
+    <table>
+        <tr> 
+            <td>Enter the word here: </td> 
+            <td><input id="first">  </td>
+            <td>Ans <input id="ans"></td>
+            <td><input type="button" onclick="leftMostVowel()" value="Vowel" /></td>
+        </tr>
+        <tr>
+    
+            <td>Enter the number:</td>
+            <td><input id="sec"></td>
+            <td>Rev <input id="ans1"></td>
+            <td><input type="button" onclick="rev()" value="Reverse" /></td>
+        </tr>
+    </table>
+</body>
+</html>

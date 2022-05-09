@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <script>
+                function checkname(){
+                    var name = document.getElementById("name");
+                    var n = /^[a-zA-Z][a-zA-Z ]+/;
+                    if(n.test(name.value)){
+                        return true;
+                    }
+                    else{
+                        alert("Input Valid name.");
+                        name.value="";
+                        name.focus();
+                        return false;
+                    }
+                }
+                
+                function checkemail(){
+                    var email = document.getElementById("eid");
+                    var e = /^[a-zA-Z0-9]+@gmail.com$/;
+                    if(e.test(email.value)){
+                        return true;
+                    }
+                    else{
+                        alert("Input Valid Email.");
+                        email.value="";
+                        email.focus();
+                        return false;
+                    }
+                }
+                
+                function checkpno(){
+                    var pno = document.getElementById("pno");
+                    var po = /^\+91[ -][0-9]{10}$/;
+                    if(po.test(pno.value)){
+                        return true;
+                    }
+                    else{
+                        alert("Moblie no format: +91 xxxxxxxxxx");
+                        pno.value="";
+                        ano.focus();            
+                        return false;
+                    }
+                }
+                
+                function checkano(){
+                    var ano = document.getElementById("ano");
+                    var a = /^\d{4}[ -]\d{4}[ -]\d{4}[ -]\d{4}$/;
+                    if(a.test(ano.value)){
+                        return true;
+                    }
+                    else{
+                        alert("Input Valid adhar number. Format: xxxx xxxx xxxx xxxx");
+                        ano.value="";
+                        ano.focus();
+                        return false;
+                    }
+                }
+                
+                function checkpin(){
+                    var pc = /^[0-9]\d{5}$/;
+                    var pin = document.getElementById("p");
+                
+                    if(pc.test(pin.value)){
+                        return true;
+                    }
+                    else{
+                        alert("Input 6 digit pin code.");
+                        pin.value="";
+                        pin.focus();
+                        return false;
+                    }
+                }
+            function validate(){
+                if(checkname() && checkemail() && checkpno() && checkano() && checkpin()){
+                    alert("Submitted");
+                    return true;
+                }
+                else
+                    return false;
+                    
+            }
+        </script>
+    </head>
+    
+    <body>
+        <form name="f1" onsubmit="return validate()">
+            <table cellspacing="2"  align="centre" cellpadding="2">
+                <tr> <td> Name:</td>  <td> <input type="text" id="name" name="fname"></td> </tr>
+                <tr> <td> Email&nbsp;Id:</td>>       <td> <input type="text" name="eid" id="eid"></td> </tr>                
+                <tr> <td> Phone&nbsp;no:</td> <td> <input type="text" name="pno" id="pno"> </td></tr>
+                <tr> <td> Adhar&nbsp;no:</td> <td> <input type="text" name="ano" id="ano"> </td></tr>
+                <tr> <td> Pincode:</td> <td> <input type="text" name="p" id="p"> </td></tr>
+                
+                
+                <tr colspan="2"> <td><input type="submit" name="Submit" ></td>> </tr>
+            </table>
+        </form>
+        
+        
+                
+    </body>
+</html>
+    

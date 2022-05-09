@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        
+        <script>
+            
+            function count_one(n){
+                let c_one = 0;
+                while (n != 0){
+                    let rem = n % 10;
+                    if (rem == 1)
+                        c_one = c_one + 1;
+                    n = parseInt(n / 10, 10);
+                }
+            return c_one;
+            }
+            
+            
+            function checkEvil(num){
+                var n = num;
+                if(n<2 || n>100){
+                    return("Input: "+ num
+                           +"\nNumber Out of Range.")
+                }
+                let i = 0, bin = 0, n_one = 0;
+                while (n != 0){
+                    let r = n % 2;
+                    bin = bin + r * (Math.pow(10, i));
+                    n = parseInt(n / 2, 10);
+                    i++;
+                }
+ 
+                n_one = count_one(bin);
+                if (n_one % 2 == 0){
+                    return("Input: "+ num
+                           +"\nBinary Equivalent: "+bin
+                           +"\nNumber of 1's: "
+                           +n_one+"\nEvil Number.");
+                }
+                else{
+                    return("Input: "+ num
+                            +"\nBinary Equivalent: "+bin
+                            +"\nNumber of 1's: "+n_one
+                            +"\nNot Evil Number.");
+                }
+                    
+            }
+            
+            
+            console.log(checkEvil(15));
+            console.log(checkEvil(26));
+            console.log(checkEvil(145));
+            
+        </script>
+        
+    </body>
+</html>

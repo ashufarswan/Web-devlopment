@@ -1,0 +1,39 @@
+<html>
+    <body>
+        <script>
+        
+            function zigzack(arr,n){
+                var flag = true;
+                for(var i = 0; i < arr.length-1; i++){
+                     if (flag){
+                         if (arr[i] > arr[i + 1]){
+                             var temp = arr[i];
+                             arr[i] = arr[i + 1];
+                             arr[i + 1] = temp;
+                         }
+                     }
+                    
+                    else{
+                         if (arr[i] < arr[i + 1]){
+                             var temp = arr[i];
+                             arr[i] = arr[i + 1];
+                             arr[i + 1] = temp;
+                         }
+                    }
+                    flag = !flag;
+                }
+                return arr;
+            }
+            
+            const a1 = [4,3,7,8,6,2,1];
+            
+            const a2 = [1,4,3,2];
+            
+            
+            
+            console.log(zigzack(a1));
+            console.log(zigzack(a2));
+            
+        </script>
+    </body>
+</html>
